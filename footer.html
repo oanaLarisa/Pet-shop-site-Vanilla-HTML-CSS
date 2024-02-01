@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Footer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins";
+      }
+      .ul-design {
+        display: inline-block;
+        list-style-type: none;
+        font-size: medium;
+        color: white;
+        padding-left: 280px;
+        padding-top: 30px;
+        padding-bottom: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .li-design {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .copy {
+        color: white;
+        display: block;
+        text-align: center;
+      }
+
+      .image-container {
+        list-style: none;
+        display: flex;
+        position: relative;
+        float: right;
+        padding-right: 180px;
+        padding-top: 60px;
+        gap: 10px;
+      }
+      .social-icon {
+        width: 30px;
+        height: 40px;
+        margin-left: 20px;
+      }
+
+      li:hover {
+        font-weight: bolder;
+      }
+      .imagine-gri {
+        filter: grayscale(100%); /* Aplică filtrul de nuanțe de gri */
+        transition: filter 0.3s; /* O tranziție pentru efectul hover */
+      }
+
+      .imagine-gri:hover {
+        width: 40px;
+        filter: grayscale(
+          0
+        ); /* Elimină filtrul de nuanțe de gri atunci când se face hover */
+      }
+      .hrmarg {
+        margin-left: 60px;
+        margin-right: 40px;
+      }
+      .text-logo-footer {
+        position: relative;
+        bottom: 10px;
+        left: 7px;
+        font-weight: 800;
+        font-size: 30px;
+        text-align: center;
+        background: linear-gradient(
+          to right,
+          rgb(2, 32, 47),
+          #fff 35%,
+          #90045f
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient 3s linear infinite;
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0% 75%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 70%;
+        }
+      }
+      .logo-footer {
+        position: relative;
+        text-decoration: none;
+        bottom: 30px;
+        left: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <footer style="background-color: #90045f">
+      <div>
+        <a class="logo-footer" href="site proiect.html"
+          ><img
+            src="images/pngegg (28).png"
+            alt="cat paw"
+            style="width: 70px"
+          /><span class="text-logo-footer">PET LOOK</span></a
+        >
+        <ul class="ul-design">
+          <li>Home</li>
+          <li class="li-design">About</li>
+          <li class="li-design">Product</li>
+          <li class="li-design">Cont</li>
+        </ul>
+
+        <ul class="ul-design">
+          <li class="li-design">Blog</li>
+          <li class="li-design">FAQ</li>
+          <li class="li-design">Contacts</li>
+          <li class="li-design">Privacy & Cookies</li>
+        </ul>
+
+        <ul class="image-container">
+          <li>
+            <a href="https://www.facebook.com/"
+              ><img
+                src="images/icon.svg/facebook-svgrepo-com.svg"
+                alt="facebook"
+                class="imagine-gri social-icon"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/"
+              ><img
+                src="images/icon.svg/instagram-svgrepo-com.svg"
+                alt="instagram"
+                class="imagine-gri social-icon"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/"
+              ><img src="images/icon.svg/youtube-svgrepo-com.svg" alt="youtube"
+              class="imagine-gri social-icon" " /></a
+            >
+          </li>
+          <li>
+            <a href="https://www.youtube.com/"
+              ><img
+                src="images/icon.svg/twitter-svgrepo-com.svg"
+                alt="twitter"
+                class="imagine-gri social-icon"
+            /></a>
+          </li>
+        </ul>
+      </div>
+
+      <hr class="hrmarg" />
+      <br />
+      <span class="copy">Copyright &copy; Company 2018-2024</span>
+      <br />
+    </footer>
+  </body>
+</html>

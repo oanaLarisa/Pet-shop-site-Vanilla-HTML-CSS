@@ -1,0 +1,627 @@
+html {
+  font-size: 62, 5%;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+}
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+/*Navbar*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.promotii {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #90045f;
+  color: white;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+.ulfiltre {
+  font-family: "Poppins";
+  font-size: 11px;
+  list-style-type: none;
+  display: flex;
+}
+.buy-btns {
+  position: absolute;
+  left: 120px;
+  top: 300px;
+  background-color: rgb(125, 123, 120);
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border-radius: 1.3em;
+  padding: 10px 40px;
+  transition: 0.3s;
+}
+.background1 {
+  position: relative;
+  display: flex;
+  margin-top: 17px;
+}
+.h1background {
+  font-family: "Poppins";
+  font-weight: bolder;
+}
+
+.title1 {
+  position: relative;
+  color: white;
+  position: absolute;
+  padding-top: 180px;
+  padding-left: 30px;
+}
+.afiltre {
+  text-decoration: none;
+  color: white;
+  padding-left: 130px;
+
+  align-items: center;
+}
+.astyle {
+  text-decoration: none;
+
+  padding-top: 25px;
+}
+nav {
+  margin: 1em;
+}
+.ul1 {
+  list-style-type: none;
+  display: flex;
+  gap: 3.1em;
+  margin: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  position: relative;
+}
+nav ul li a.active:before {
+  position: absolute;
+  content: "";
+  width: 35%;
+  height: 1px;
+  border-bottom: 2px solid black;
+  bottom: -6px;
+}
+nav ul li a:before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 1px;
+  border-bottom: 2px solid rgb(139, 136, 136);
+  bottom: -6px;
+  transition: width 0.3s;
+}
+/*IMG MARE*/
+
+.background {
+  background-image: url(../images/dogblack.jpg);
+  background-size: 1500px;
+  width: 1400px;
+  height: 800px;
+}
+
+/*Hero section*/
+
+main {
+  display: flex;
+  gap: 8em;
+  margin-top: 3em;
+}
+.left-col {
+  width: 45%;
+}
+.right-col {
+  flex-grow: 1;
+}
+h1 {
+  font-size: 2.5rem;
+  font-family: "Playfair Display";
+  font-weight: normal;
+  margin: 0;
+}
+.subhead {
+  font-size: 1.3rem;
+}
+.btns {
+  display: flex;
+  gap: 2em;
+}
+.first-btns {
+  background-color: rgb(161, 159, 156);
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  border-radius: 1.3em;
+  padding: 1em 2em;
+  transition: 0.3s;
+}
+.second-btns {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  padding: 1em 0;
+  transition: 0.3s;
+}
+.news {
+  display: flex;
+  gap: 3em;
+  padding: 2em;
+  border: 1px solid black;
+  border-radius: 0.8em;
+  position: relative;
+}
+p.employees {
+  font-size: 2.3rem;
+  margin: 0;
+  font-weight: 200;
+  text-align: center;
+}
+
+p.details {
+  font-size: 1.2rem;
+  margin: 0;
+}
+/*Right grid colaj*/
+.right-col {
+  display: grid;
+  gap: 2.3em;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas:
+    "left right"
+    "left bottom";
+}
+.card1 {
+  object-fit: cover;
+  grid-area: left;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  background-image: url(../images/dogg.jpg);
+}
+.card2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-items: center;
+  background-size: cover;
+  background-image: url(../images/charming-jack-russell-posing-studio-warm-gray-sweater.jpg);
+}
+.card3 {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  align-items: center;
+  background-image: url(../images/cute-little-dog-with-costume.jpg);
+}
+.card {
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4em;
+  padding: 1.1em;
+  display: flex;
+  align-items: end;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transition: backgroun-size 800ms;
+}
+.card-details {
+  background-color: white;
+  border-radius: 0.2em;
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 800ms;
+}
+.card-details a {
+  color: black;
+  text-decoration: none;
+  font-size: 0, 5rem;
+  font-weight: bold;
+  display: flex;
+}
+.card-details p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+p.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(186, 44, 44);
+}
+.product-title {
+  font-size: 0, 5rem;
+}
+.pargrafgrid1 {
+  font-size: 0, 2rem;
+}
+/*HOVER*/
+nav ul li a:hover::before {
+  width: 35%;
+}
+.first-btns:hover {
+  background: rgb(172, 148, 86);
+}
+.buy-btns:hover {
+  background: rgb(172, 148, 86);
+}
+.a-cos:hover {
+  background: rgb(172, 148, 86);
+}
+.second-btns:hover {
+  text-decoration: underline;
+}
+.card:hover {
+  background-size: 120%;
+}
+.card:hover .card-details {
+  transform: translateY(-10px);
+}
+main {
+  animation: growIn 3s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  transform: scale(0.4);
+}
+@keyframes growIn {
+  to {
+    transform: scale(1);
+  }
+}
+.paw-span {
+  position: relative;
+  bottom: 10px;
+  left: 9px;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  font-family: "Poppins";
+  background: linear-gradient(to right, rgb(2, 32, 47), #fff 35%, #90045f);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 3s linear infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 75%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 70%;
+  }
+}
+.searchs {
+  width: 400px;
+  display: flex;
+  position: relative;
+  top: 30px;
+  right: 400px;
+  background-color: rgb(227, 222, 222);
+  color: rgb(137, 135, 135);
+  border-radius: 50px;
+  padding: 5px 10px;
+}
+.div5produse {
+  padding-bottom: 400px;
+  margin: 20px 0;
+  display: flex;
+  gap: 25px;
+  justify-self: center;
+  align-items: center;
+  background-color: rgba(233, 230, 227, 0.588);
+  padding: 20px 50px;
+  align-items: end;
+}
+.prod1 {
+  width: 340px;
+  height: 400px;
+  object-fit: cover;
+  align-items: center;
+  background-image: url(../images/beautiful-yorkshire-terrier-dog-peeps-out-his-beautiful-animal-house.jpg);
+  background-size: 120%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.prod2 {
+  background-color: grey;
+  width: 340px;
+  height: 400px;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/small-red-kitten-plays-with-ball.jpg);
+  background-size: 120%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.prod3 {
+  background-color: grey;
+  width: 340px;
+  height: 400px;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/french-bulldog-military-uniform-white-background.jpg);
+  background-size: 115%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.prod4 {
+  background-color: grey;
+  width: 340px;
+  height: 400px;
+  object-fit: cover;
+  align-items: center;
+  background-image: url(../images/dog-bed-2-min_1800x1800.webp);
+  background-size: 167%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.prod5 {
+  background-color: grey;
+  width: 340px;
+  height: 400px;
+  object-fit: cover;
+  align-items: center;
+  background-image: url(../images/cat-carrier-box-floor-homeggg.jpg);
+  background-size: 130%;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.product-detail {
+  background-color: white;
+  border-radius: 0.2em;
+  padding: 0, 5em;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 0.2em;
+}
+.product-t {
+  color: black;
+  text-decoration: none;
+  font-size: 0, 5rem;
+  font-weight: bold;
+  display: flex;
+}
+.product-detail p {
+  font-size: 1 rem;
+  margin: 0;
+}
+
+.pret {
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(186, 44, 44);
+}
+
+.prod1:hover {
+  box-shadow: 10px 10px 15px black;
+}
+.prod2:hover {
+  box-shadow: 10px 10px 15px black;
+}
+.prod3:hover {
+  box-shadow: 10px 10px 15px black;
+}
+.prod4:hover {
+  box-shadow: 10px 10px 15px black;
+}
+.prod5:hover {
+  box-shadow: 10px 10px 15px black;
+}
+.product-detail {
+  position: relative;
+
+  display: flex;
+  top: 360px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+
+  align-items: center;
+  justify-content: space-between;
+}
+.product-detail a {
+  color: black;
+  text-decoration: none;
+  font-size: 0, 5rem;
+  font-weight: bold;
+  display: flex;
+}
+.product-detail p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.pret {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: rgb(186, 44, 44);
+}
+
+.background2 {
+  background-image: url(../images/shiba.png);
+  background-size: 1500px;
+  width: 1400px;
+  height: 800px;
+}
+.a-cos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(125, 123, 120);
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border-radius: 1.3em;
+  padding: 10px 10px;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+.a-cos:hover {
+  background: rgb(172, 148, 86);
+}
+.div-video {
+  position: relative;
+}
+.div-titlu-video1 {
+  position: absolute;
+  top: 76px;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.495);
+  height: 788px;
+  width: 500px;
+}
+.text-video1 {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  width: 500px;
+  top: 250px;
+}
+.video-btn {
+  color: white;
+  background-color: rgb(170, 168, 164);
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  padding: 10px 50px;
+  border-radius: 40px;
+}
+.video-btn:hover {
+  background: rgb(172, 148, 86);
+}
+.search-input {
+  width: 400px;
+  background-color: rgb(227, 222, 222);
+  color: rgb(137, 135, 135);
+  border-radius: 50px;
+  padding: 5px 10px;
+  border: none;
+}
+.imagine-gri {
+  filter: grayscale(100%); /* Aplică filtrul de nuanțe de gri */
+  transition: filter 0.3s; /* O tranziție pentru efectul hover */
+}
+
+.imagine-gri:hover {
+  width: 40px;
+  filter: grayscale(
+    0
+  ); /* Elimină filtrul de nuanțe de gri atunci când se face hover */
+}
+.hrmarg {
+  margin-left: 60px;
+  margin-right: 40px;
+}
+.text-logo-footer {
+  position: relative;
+  bottom: 10px;
+  left: 7px;
+  font-weight: 800;
+  font-size: 30px;
+  text-align: center;
+  background: linear-gradient(to right, rgb(2, 32, 47), #fff 35%, #90045f);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 3s linear infinite;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 75%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 70%;
+  }
+}
+.logo-footer {
+  position: relative;
+  text-decoration: none;
+  bottom: 30px;
+  left: 120px;
+}
+.ul-design {
+  display: inline-block;
+  list-style-type: none;
+  font-size: medium;
+  color: white;
+  padding-left: 280px;
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.li-design {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.copy {
+  color: white;
+  display: block;
+  text-align: center;
+  font-family: "Playfair Display";
+}
+
+.image-container {
+  list-style: none;
+  display: flex;
+  position: relative;
+  float: right;
+  padding-right: 180px;
+  padding-top: 60px;
+  gap: 10px;
+}
+.social-icon {
+  width: 30px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+li:hover {
+  font-weight: bolder;
+}

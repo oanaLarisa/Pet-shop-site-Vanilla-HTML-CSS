@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+    <title>Contul meu</title>
+    <style>
+      body {
+        margin: 0;
+
+        background-image: url(images/reddog.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: "Montserrat", sans-serif;
+        animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+        transform: scale(0.5);
+      }
+      footer {
+        position: relative;
+        top: 900px;
+      }
+      @keyframes growIn {
+        to {
+          transform: scale(1);
+        }
+      }
+
+      .div-content {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+      }
+      form {
+        background-color: rgba(255, 255, 255, 0.429);
+        padding: 3em;
+        height: 590px;
+        width: 450px;
+        border-radius: 20px;
+        border-left: 1px solid white;
+        border-top: 1px solid white;
+        backdrop-filter: blur(10px);
+        box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: fixed;
+        top: 180px;
+        transition: all 0.2s ease-in-out;
+      }
+
+      h2 {
+        font-weight: 500;
+        color: black;
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      a {
+        position: relative;
+        bottom: 20px;
+        text-decoration: none;
+        color: rgb(29, 27, 27);
+        font-size: 14px;
+      }
+
+      a:hover {
+        text-shadow: 2px 2px 6px white;
+      }
+      a:active {
+        text-shadow: none;
+      }
+
+      input {
+        background: transparent;
+        font-weight: bold;
+        background-color: rgba(193, 188, 188, 0.278);
+        width: 300px;
+        padding: 1em;
+        margin-bottom: 2em;
+        border: none;
+        border-left: 1px solid white;
+        border-top: 1px solid white;
+        border-radius: 5000px;
+        backdrop-filter: blur(5px);
+        box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+        color: white;
+        transition: all 0.2s ease-in-out;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      input:hover {
+        background: rgba(226, 223, 223, 0.633);
+        box-shadow: 4px 4px 60px 8px rgba(30, 30, 30, 0.566);
+      }
+
+      ::placeholder {
+        font-family: Montserrat, sans-serif;
+        font-weight: 400;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      }
+      .login-button {
+        margin: 0;
+        width: 320px;
+        background-color: white;
+        color: black;
+      }
+      .login-button:hover {
+        box-shadow: 6px 6px 30px 3px rgba(81, 80, 80, 0.74);
+        font-size: 15px;
+        background: rgb(194, 168, 102);
+        color: white;
+      }
+      .paw-span {
+        position: relative;
+        bottom: 7px;
+        left: 7px;
+        font-weight: bold;
+        font-size: 17px;
+        text-align: center;
+        font-family: "Poppins";
+        background: linear-gradient(
+          to right,
+          rgb(2, 32, 47),
+          #fff 35%,
+          #90045f
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient 3s linear infinite;
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0% 75%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 70%;
+        }
+      }
+      .astyle {
+        position: relative;
+        text-decoration: none;
+        top: 50px;
+        padding-top: 10px;
+      }
+      .newsletter {
+        background-color: rgba(255, 255, 255, 0.429);
+        padding: 3em;
+        height: 500px;
+        width: 380px;
+        border-radius: 20px;
+        border-left: 1px solid white;
+        border-top: 1px solid white;
+        backdrop-filter: blur(10px);
+        box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: fixed;
+        top: 180px;
+        transition: all 0.2s ease-in-out;
+        float: right;
+        right: 100px;
+      }
+      div.newsletter input {
+        align-items: center;
+        width: 300px;
+        box-shadow: none;
+      }
+      .lasuta {
+        font-size: 30px;
+        font-weight: bolder;
+        color: #900448;
+        font-family: "Poppins";
+      }
+      .ul-design {
+        display: inline-block;
+        list-style-type: none;
+        font-size: medium;
+        color: white;
+        padding-left: 280px;
+        padding-top: 30px;
+        padding-bottom: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .li-design {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .copy {
+        color: white;
+        display: block;
+        text-align: center;
+        font-family: "Playfair Display";
+      }
+
+      .image-container {
+        list-style: none;
+        display: flex;
+        position: relative;
+        float: right;
+        padding-right: 180px;
+        padding-top: 60px;
+        gap: 10px;
+      }
+      .social-icon {
+        width: 30px;
+        height: 40px;
+        margin-left: 20px;
+      }
+
+      li:hover {
+        font-weight: bolder;
+      }
+      .imagine-gri {
+        filter: grayscale(100%); /* Aplică filtrul de nuanțe de gri */
+        transition: filter 0.3s; /* O tranziție pentru efectul hover */
+      }
+
+      .imagine-gri:hover {
+        width: 40px;
+        filter: grayscale(
+          0
+        ); /* Elimină filtrul de nuanțe de gri atunci când se face hover */
+      }
+      .hrmarg {
+        margin-left: 60px;
+        margin-right: 40px;
+      }
+      .text-logo-footer {
+        position: relative;
+        bottom: 10px;
+        left: 7px;
+        font-weight: 800;
+        font-size: 30px;
+        text-align: center;
+        background: linear-gradient(
+          to right,
+          rgb(2, 32, 47),
+          #fff 35%,
+          #90045f
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient 3s linear infinite;
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0% 75%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 70%;
+        }
+      }
+      .logo-footer {
+        position: relative;
+        text-decoration: none;
+        bottom: 30px;
+        left: 120px;
+      }
+      .paw-span {
+        position: relative;
+        bottom: 10px;
+        left: 7px;
+        font-weight: 800;
+        font-size: 20px;
+        text-align: center;
+
+        background: linear-gradient(
+          to right,
+          rgb(2, 32, 47),
+          #fff 35%,
+          #90045f
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient 3s linear infinite;
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0% 75%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 70%;
+        }
+      }
+      .astyle {
+        position: relative;
+        text-decoration: none;
+        top: 5px;
+        left: 25px;
+      }
+      header {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        animation: none;
+        margin-top: -10px;
+      }
+      .ul1 {
+        position: relative;
+        list-style-type: none;
+        display: flex;
+        gap: 3.1em;
+        margin: 0;
+        top: 12px;
+      }
+      .searchs {
+        width: 400px;
+        display: flex;
+        position: relative;
+        top: 40px;
+        right: 450px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        font-size: 1rem;
+        position: relative;
+      }
+      nav ul li a.active:before {
+        position: absolute;
+        content: "";
+        width: 35%;
+        height: 1px;
+        border-bottom: 2px solid black;
+        bottom: -6px;
+      }
+      nav ul li a:before {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 1px;
+        border-bottom: 2px solid rgb(139, 136, 136);
+        bottom: -6px;
+        transition: width 0.3s;
+      }
+      nav {
+        margin: 1em;
+      }
+      .svg {
+        width: 30px;
+        position: relative;
+        right: 20px;
+        border-radius: 10%;
+        padding: 5px;
+        bottom: 5px;
+        background-color: rgb(203, 170, 86);
+      }
+      nav ul li a:hover::before {
+        width: 35%;
+      }
+      .search-input {
+        width: 400px;
+        background-color: rgb(227, 222, 222);
+        color: rgb(137, 135, 135);
+        border-radius: 50px;
+        padding: 5px 10px;
+        border: none;
+      }
+      @media only screen and (max-width: 500px) {
+        .wrapper {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 800px) {
+        .wrapper {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 1200px) {
+        .wrapper {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="astyle" href="site proiect.html"
+        ><img
+          src="images/pngegg (28).png"
+          alt="cat paw"
+          style="width: 50px"
+        /><span class="paw-span">PET LOOK</span></a
+      >
+      <nav>
+        <span class="searchs"
+          ><input
+            type="search"
+            placeholder="Searchs"
+            name="search"
+            class="search-input"
+        /></span>
+        <ul class="ul1">
+          <li><a href="site proiect.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="produse.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cont.html">Cont</a></li>
+          <li>
+            <a href="#"
+              ><img src="images/icon.svg/cart-shopping-fast.svg" class="svg"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div>
+      <div class="div-content">
+        <br />
+        <form method="post">
+          <h2 style="text-align: center; font-size: 30px">Register</h2>
+          <div>
+            <input type="text" name="Nume" placeholder="Nume" />
+          </div>
+
+          <div>
+            <input type="text" name="Prenume" placeholder="Prenume" />
+          </div>
+
+          <div>
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+
+          <div>
+            <input type="password" name="password" placeholder="Password" />
+          </div>
+
+          <br />
+          <div>
+            <input type="button" value="Register" class="login-button" />
+          </div>
+
+          <br />
+          <span
+            >Do you have an account?
+            <a href="#" style="position: relative; bottom: 0"
+              ><b>Login</b></a
+            ></span
+          >
+        </form>
+      </div>
+      <div class="newsletter">
+        <h1>NEWSLETTER</h1>
+
+        <span class="lasuta">15% reducere</span>
+        <p class="paragraf">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed officiis
+          repellendus aliquam?
+        </p>
+
+        <input type="email" name="email" placeholder="Email" />
+        <input type="button" value="Subscribe" class="login-button" />
+      </div>
+    </div>
+    <footer style="background-color: #90045f">
+      <div>
+        <a class="logo-footer" href="site proiect.html"
+          ><img
+            src="images/pngegg (28).png"
+            alt="cat paw"
+            style="width: 70px"
+          /><span class="text-logo-footer">PET LOOK</span></a
+        >
+        <ul class="ul-design">
+          <li>Home</li>
+          <li class="li-design">About</li>
+          <li class="li-design">Product</li>
+          <li class="li-design">Cont</li>
+        </ul>
+
+        <ul class="ul-design">
+          <li class="li-design">Blog</li>
+          <li class="li-design">FAQ</li>
+          <li class="li-design">Contacts</li>
+          <li class="li-design">Privacy & Cookies</li>
+        </ul>
+
+        <ul class="image-container">
+          <li>
+            <a href="https://www.facebook.com/"
+              ><img
+                src="images/icon.svg/facebook-svgrepo-com.svg"
+                alt="facebook"
+                class="imagine-gri social-icon"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/"
+              ><img
+                src="images/icon.svg/instagram-svgrepo-com.svg"
+                alt="instagram"
+                class="imagine-gri social-icon"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/"
+              ><img src="images/icon.svg/youtube-svgrepo-com.svg" alt="youtube"
+              class="imagine-gri social-icon" " /></a
+            >
+          </li>
+          <li>
+            <a href="https://www.youtube.com/"
+              ><img
+                src="images/icon.svg/twitter-svgrepo-com.svg"
+                alt="twitter"
+                class="imagine-gri social-icon"
+            /></a>
+          </li>
+        </ul>
+      </div>
+
+      <hr class="hrmarg" />
+      <br />
+      <span class="copy">Copyright &copy; PET LOOK 2018-2024</span>
+      <br />
+    </footer>
+  </body>
+</html>

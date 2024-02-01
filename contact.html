@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+    <title>Contact us</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #fef4f4;
+
+        font-family: "Poppins";
+      }
+      footer {
+        margin: 0;
+        padding: 0;
+      }
+      #contact {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        position: relative;
+        top: 50px;
+      }
+
+      .section-header {
+        font-size: 40px;
+        font-weight: 800;
+        text-align: center;
+      }
+      footer {
+        position: relative;
+      }
+      .contact-wrapper {
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-right: 50px;
+        position: relative;
+        max-width: 950px;
+      }
+      form div input,
+      textarea {
+        border-radius: 20px;
+        width: 100%;
+        height: 50px;
+
+        font-family: "Poppins";
+      }
+
+      form div input:hover {
+        box-shadow: 0px 0px 10px rgb(59, 58, 58);
+      }
+      textarea:hover {
+        box-shadow: 0px 0px 10px rgb(59, 58, 58);
+      }
+      .form-style {
+        position: relative;
+        display: grid;
+        gap: 10px;
+        width: 50%;
+        height: 450px;
+        padding-top: 30px;
+        background-color: rgba(255, 255, 255, 0.585);
+        padding-bottom: 210px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-left: 1px solid rgb(96, 93, 93);
+        border-top: 1px solid rgb(197, 194, 194);
+        backdrop-filter: blur(10px);
+        box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.312);
+        border-radius: 20px;
+        transition: all 0.2s ease-in-out;
+        right: 60px;
+      }
+      .right-colum {
+        position: relative;
+        left: 60px;
+      }
+      .img-gri {
+        filter: grayscale(100%); /* Aplică filtrul de nuanțe de gri */
+        transition: filter 0.3s;
+      }
+
+      .social-media-list img:hover {
+        width: 40px;
+        filter: grayscale(0);
+      }
+
+      .message-style {
+        height: 150px;
+      }
+      .btn-primary {
+        position: relative;
+        text-align: center;
+        border-radius: 20px;
+        width: 100%;
+        height: 40px;
+        border: none;
+        font-family: "Poppins";
+        background-color: rgb(125, 123, 120);
+        color: white;
+        font-weight: 400;
+      }
+      .btn-primary:hover {
+        font-size: 18px;
+        font-weight: 600;
+        background: rgb(172, 148, 86);
+        color: white;
+      }
+      .ul-style {
+        list-style-type: none;
+        display: grid;
+        gap: 8px;
+        font-size: 20px;
+      }
+      .social-media-list {
+        list-style-type: none;
+        position: relative;
+        display: flex;
+        gap: 40px;
+      }
+      ul li a {
+        text-decoration: none;
+        color: rgb(44, 43, 43);
+        list-style-type: none;
+      }
+      li span a img {
+        position: relative;
+        top: 7px;
+      }
+      .copyright {
+        position: relative;
+        text-align: center;
+      }
+      .right-colum {
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        bottom: 15px;
+      }
+      .paw-span {
+        position: relative;
+        bottom: 10px;
+        left: 7px;
+        font-weight: 800;
+        font-size: 20px;
+        text-align: center;
+
+        background: linear-gradient(
+          to right,
+          rgb(2, 32, 47),
+          #fff 35%,
+          #90045f
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient 3s linear infinite;
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0% 75%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 70%;
+        }
+      }
+      .astyle {
+        position: relative;
+        text-decoration: none;
+        top: 10px;
+        left: 25px;
+      }
+      header {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+        animation: none;
+        margin-top: -10px;
+      }
+      .ul1 {
+        list-style-type: none;
+        display: flex;
+        gap: 3.1em;
+        margin: 0;
+      }
+      .searchs {
+        width: 400px;
+        display: flex;
+        position: relative;
+        top: 30px;
+        right: 450px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        position: relative;
+      }
+      nav ul li a.active:before {
+        position: absolute;
+        content: "";
+        width: 35%;
+        height: 1px;
+        border-bottom: 2px solid black;
+        bottom: -6px;
+      }
+      nav ul li a:before {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 1px;
+        border-bottom: 2px solid rgb(139, 136, 136);
+        bottom: -6px;
+        transition: width 0.3s;
+      }
+      nav {
+        margin: 1em;
+      }
+      .svg {
+        width: 30px;
+        position: relative;
+        right: 20px;
+        border-radius: 10%;
+        padding: 5px;
+        bottom: 5px;
+        background-color: rgb(203, 170, 86);
+      }
+      nav ul li a:hover::before {
+        width: 35%;
+      }
+      .search-input {
+        width: 400px;
+        background-color: rgb(227, 222, 222);
+        color: rgb(137, 135, 135);
+        border-radius: 50px;
+        padding: 5px 10px;
+        border: none;
+      }
+      @media only screen and (max-width: 500px) {
+        .wrapper {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 800px) {
+        .wrapper {
+          width: 100%;
+        }
+      }
+      @media only screen and (max-width: 1200px) {
+        .wrapper {
+          width: 100%;
+        }
+      }
+
+      .img-dogs {
+        position: relative;
+        display: flex;
+
+        width: 100%;
+      }
+      .ul-design {
+        display: inline-block;
+        list-style-type: none;
+        font-size: medium;
+        color: white;
+        padding-left: 280px;
+        padding-top: 30px;
+        padding-bottom: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .li-design {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .copy {
+        color: white;
+        display: block;
+        text-align: center;
+        font-family: "Playfair Display";
+      }
+
+      .image-container {
+        list-style: none;
+        display: flex;
+        position: relative;
+        float: right;
+        padding-right: 180px;
+        padding-top: 60px;
+        gap: 10px;
+      }
+      .social-icon {
+        width: 30px;
+        height: 40px;
+        margin-left: 20px;
+      }
+
+      li:hover {
+        font-weight: bolder;
+      }
+      .imagine-gri {
+        filter: grayscale(100%); /* Aplică filtrul de nuanțe de gri */
+        transition: filter 0.3s; /* O tranziție pentru efectul hover */
+      }
+
+      .imagine-gri:hover {
+        width: 40px;
+        filter: grayscale(
+          0
+        ); /* Elimină filtrul de nuanțe de gri atunci când se face hover */
+      }
+      .hrmarg {
+        margin-left: 60px;
+        margin-right: 40px;
+      }
+      .text-logo-footer {
+        position: relative;
+        bottom: 10px;
+        left: 7px;
+        font-weight: 800;
+        font-size: 30px;
+        text-align: center;
+        background: linear-gradient(
+          to right,
+          rgb(2, 32, 47),
+          #fff 35%,
+          #90045f
+        );
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient 3s linear infinite;
+      }
+      @keyframes gradient {
+        0% {
+          background-position: 0% 75%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 70%;
+        }
+      }
+      .logo-footer {
+        position: relative;
+        text-decoration: none;
+        bottom: 30px;
+        left: 120px;
+      }
+    </style>
+  </head>
+  <body class="wrapper">
+    <header>
+      <a class="astyle" href="site proiect.html"
+        ><img
+          src="images/pngegg (28).png"
+          alt="cat paw"
+          style="width: 50px"
+        /><span class="paw-span">PET LOOK</span></a
+      >
+      <nav>
+        <span class="searchs"
+          ><input
+            type="search"
+            placeholder="Searchs"
+            name="search"
+            class="search-input"
+        /></span>
+        <ul class="ul1">
+          <li><a href="site proiect.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="produse.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cont.html">Cont</a></li>
+          <li>
+            <a href="#"
+              ><img src="images/icon.svg/cart-shopping-fast.svg" class="svg"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="contact">
+      <h1 class="section-header">CONTACT US</h1>
+      <br />
+
+      <div class="contact-wrapper">
+        <!-- Left contact page -->
+
+        <form method="post" class="form-style">
+          <div>
+            <input type="text" name="name" placeholder="Name" />
+          </div>
+
+          <div>
+            <input type="email" name="email" placeholder="Email" />
+          </div>
+
+          <div>
+            <input
+              type="phone
+                "
+              name="phone"
+              placeholder="Phone"
+            />
+          </div>
+
+          <div>
+            <textarea
+              type="textarea"
+              name="Message"
+              placeholder="Message"
+              class="message-style"
+            ></textarea>
+          </div>
+          <div>
+            <button
+              class="btn-primary"
+              type="submit"
+              aria-placeholder="Message"
+            >
+              <span class="send-text">SEND</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Left contact page -->
+
+        <div class="right-colum">
+          <ul class="ul-style">
+            <li>
+              <span>
+                <img
+                  src="images/icon.svg/location-pin-navigation-destination-maps-svgrepo-com.svg"
+                  alt="location"
+                  width="30px"
+                />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;City, State</span
+              >
+            </li>
+
+            <li>
+              <span>
+                <a href="tel" title="Give me a call"
+                  ><img
+                    src="images/icon.svg/phone-svgrepo-com.svg"
+                    alt="phone"
+                    width="30px"
+                  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0745763218</a
+                ></span
+              >
+            </li>
+
+            <li>
+              <span
+                ><a href="mail" title="Send me an email"
+                  ><img
+                    src="images/icon.svg/mail-email-message-envelope-svgrepo-com.svg"
+                    alt="email"
+                    width="30px"
+                  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hitmeup@gmail.com</a
+                ></span
+              >
+            </li>
+          </ul>
+
+          <hr />
+          <br />
+          <ul class="social-media-list">
+            <li>
+              <a href="#" target="blank" class="contact-icon"
+                ><img
+                  src="images/icon.svg/instagram-svgrepo-com.svg"
+                  alt="instagram icon"
+                  width="30px"
+                  class="img-gri"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="contact-icon"
+                ><img
+                  src="images/icon.svg/facebook-svgrepo-com.svg"
+                  alt="facebook icon"
+                  width="30px"
+                  class="img-gri"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="contact-icon"
+                ><img
+                  src="images/icon.svg/twitter-svgrepo-com.svg"
+                  alt="twitter"
+                  width="30px"
+                  class="img-gri"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" class="contact-icon"
+                ><img
+                  src="images/icon.svg/youtube-svgrepo-com.svg"
+                  alt="youtube"
+                  width="30px"
+                  class="img-gri"
+                />
+              </a>
+            </li>
+          </ul>
+          <br />
+          <hr />
+
+          <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+        </div>
+        <br />
+      </div>
+    </section>
+    <div>
+      <img src="images/dogs many.png" alt="dogs small" class="img-dogs" />
+    </div>
+
+    <footer style="background-color: #90045f">
+      <div>
+        <a class="logo-footer" href="site proiect.html"
+          ><img
+            src="images/pngegg (28).png"
+            alt="cat paw"
+            style="width: 70px"
+          /><span class="text-logo-footer">PET LOOK</span></a
+        >
+        <ul class="ul-design">
+          <li>Home</li>
+          <li class="li-design">About</li>
+          <li class="li-design">Product</li>
+          <li class="li-design">Cont</li>
+        </ul>
+
+        <ul class="ul-design">
+          <li class="li-design">Blog</li>
+          <li class="li-design">FAQ</li>
+          <li class="li-design">Contacts</li>
+          <li class="li-design">Privacy & Cookies</li>
+        </ul>
+
+        <ul class="image-container">
+          <li>
+            <a href="https://www.facebook.com/"
+              ><img
+                src="images/icon.svg/facebook-svgrepo-com.svg"
+                alt="facebook"
+                class="imagine-gri social-icon"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/"
+              ><img
+                src="images/icon.svg/instagram-svgrepo-com.svg"
+                alt="instagram"
+                class="imagine-gri social-icon"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/"
+              ><img src="images/icon.svg/youtube-svgrepo-com.svg" alt="youtube"
+              class="imagine-gri social-icon" " /></a
+            >
+          </li>
+          <li>
+            <a href="https://www.youtube.com/"
+              ><img
+                src="images/icon.svg/twitter-svgrepo-com.svg"
+                alt="twitter"
+                class="imagine-gri social-icon"
+            /></a>
+          </li>
+        </ul>
+      </div>
+
+      <hr class="hrmarg" />
+      <br />
+      <span class="copy">Copyright &copy; PET LOOK 2018-2024</span>
+      <br />
+    </footer>
+  </body>
+</html>
